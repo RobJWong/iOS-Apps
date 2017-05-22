@@ -6,6 +6,7 @@
 //  Copyright © 2017 Robert Wong. All rights reserved.
 //
 
+
 import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate
@@ -13,13 +14,32 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
+        print("ConversionViewController loaded its view.")
         updateCelsiusLabel()
     }
+
     
-    var fahrenheitValue: Measurement<UnitTemperature>?{
+    override func viewWillAppear(_ animated: Bool) {
+        let backgroundColor = self.view.backgroundColor
+        let testColor = UIColor(red: 0.968879, green: 0.965455,blue: 0.956224, alpha: 1.0)
+        if  (backgroundColor!.description == testColor.description) {
+            self.view.backgroundColor = UIColor.black
+        } else {
+            self.view.backgroundColor = UIColor(red: 0.968879, green: 0.965455,blue: 0.956224, alpha: 1.0)
+        }
+        
+//        var testColor = UIColor.black .isEqual(UIColor.black)
+//        print(testColor)
+        //true
+        
+        //default---self.view.backgroundColor = UIColor (red: 0.961, green: 0.957, blue: 0.945, alpha: 1.0)
+        //self.view.backgroundColor = UIColor (red: 0.000, green: 0.000, blue: 0.000, alpha: 1.0)
+    }
+
+    
+    var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
             updateCelsiusLabel()
         }
