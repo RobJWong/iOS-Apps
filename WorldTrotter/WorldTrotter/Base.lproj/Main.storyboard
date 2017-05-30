@@ -95,10 +95,10 @@
         <!--Map-->
         <scene sceneID="LJ2-YS-5Tq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e6F-TF-slr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Iuf-DR-8zU" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="Mea-Kb-Ygb"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6F-TF-slr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1452" y="-537.48125937031489"/>
         </scene>
@@ -115,11 +115,22 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BVc-KJ-5ht"/>
                         <segue destination="Iuf-DR-8zU" kind="relationship" relationship="viewControllers" id="6E2-pS-tbL"/>
+                        <segue destination="m21-lU-dom" kind="relationship" relationship="viewControllers" id="YDF-Ip-UWC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkz-ww-vgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="-537.48125937031489"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="ws4-tf-IyZ">
+            <objects>
+                <viewController id="m21-lU-dom" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Web" id="rpp-Mn-RR0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doD-W0-2JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="255"/>
         </scene>
     </scenes>
     <resources>
