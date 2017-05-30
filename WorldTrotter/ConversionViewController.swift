@@ -24,6 +24,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
     override func viewWillAppear(_ animated: Bool) {
         let backgroundColor = self.view.backgroundColor
         let testColor = UIColor(red: 0.968879, green: 0.965455,blue: 0.956224, alpha: 1.0)
+        
         if  (backgroundColor!.description == testColor.description) {
             self.view.backgroundColor = UIColor.black
         } else {
