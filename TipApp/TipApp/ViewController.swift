@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var totalNumber : UITextField!
     @IBOutlet var tipNumber : UITextField!
+    @IBOutlet var splitPeople : UITextField!
     @IBOutlet var answerNumber : UILabel!
     
     @IBAction func calculateSplit(_ sender: UIButton)
     {
-        if let total = Double(totalNumber.text!), let tip = Double(tipNumber.text!)
+        if let total = Double(totalNumber.text!), let tip = Double(tipNumber.text!), let people = Double(splitPeople.text!)
         {
-            let splitNumber: String = String(format: "%.2f", (total * (1 + (tip)/100)))
+            let splitNumber: String = String(format: "%.2f", ((total * (1 + (tip)/100))/people))
             answerNumber.text = splitNumber
         }
         else
