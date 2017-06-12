@@ -10,13 +10,14 @@ import UIKit
 import MapKit
 
 
-class MapViewController: UIViewController{
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print ("MapViewController loaded its view.")
+        
     }
     
     override func loadView()
@@ -47,6 +48,21 @@ class MapViewController: UIViewController{
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
         
+        
+        //////Button Creation
+        let locateButton = UIButton.init(type: .system)
+        locateButton.setTitle("?", for: .normal)
+        locateButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(locateButton)
+        
+        let topConstraintButton = locateButton.topAnchor.constraint(equalTo:segmentedControl.topAnchor, constant: 32 )
+        let leadingConstraintButton = locateButton.leadingAnchor.constraint(equalTo: segmentedControl.leadingAnchor)
+        let trailingConstraintButton = locateButton.trailingAnchor.constraint(equalTo: segmentedControl.trailingAnchor)
+        
+        topConstraintButton.isActive = true
+        leadingConstraintButton.isActive = true
+        trailingConstraintButton.isActive = true
+        
     }
     
     func mapTypeChanged(_ segControl: UISegmentedControl) {
@@ -61,4 +77,9 @@ class MapViewController: UIViewController{
             break
         }
     }
+    
+//    func mapViewWillStartLocatingUser(_ mapView: MKMapView)
+//    {
+//        mapView.showsUserLocation = true
+//    }
 }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConversionViewController.swift"
-            timestampString = "517186674.095159"
+            timestampString = "517867321.279864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorldTrotter/MapViewController.swift"
-            timestampString = "517797172.99038"
+            timestampString = "517867321.279864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "loadView()"
             landmarkType = "7">
          </BreakpointContent>

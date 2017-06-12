@@ -31,12 +31,6 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
             self.view.backgroundColor = UIColor(red: 0.968879, green: 0.965455,blue: 0.956224, alpha: 1.0)
         }
         
-//        var testColor = UIColor.black .isEqual(UIColor.black)
-//        print(testColor)
-        //true
-        
-        //default---self.view.backgroundColor = UIColor (red: 0.961, green: 0.957, blue: 0.945, alpha: 1.0)
-        //self.view.backgroundColor = UIColor (red: 0.000, green: 0.000, blue: 0.000, alpha: 1.0)
     }
 
     

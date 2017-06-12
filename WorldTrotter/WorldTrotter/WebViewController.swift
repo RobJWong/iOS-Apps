@@ -16,10 +16,6 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        //view can be initalized in loadView or viewDidLoad. Don't know the difference between the two
-        view = webView
-        
         let testURL = URL(string: "https://www.bignerdranch.com")
         let requestURL = URLRequest(url:testURL!)
         
@@ -28,10 +24,10 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
-        //webView = WKWebView()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
-        //view = webView
+        //view can be initalized in loadView or viewDidLoad. Don't know the difference between the two
+        view = webView
         
         print ("WebViewController loaded its view.")
     }
