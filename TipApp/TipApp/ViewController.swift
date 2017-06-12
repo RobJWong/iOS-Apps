@@ -13,18 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet var tipNumber : UITextField!
     @IBOutlet var answerNumber : UILabel!
     
-//    @IBAction func calculateSplit(_ sender: UIButton)
-//    {
-//        if let total = Double(totalNumber.text!), let tip = Double(tipNumber.text!)
-//        {
-//            let splitNumber: String = String(format: "%.2f", (total * (1 + (tip)/100)))
-//            answerNumber.text = splitNumber
-//        }
-//        else
-//        {
-//            answerNumber.text = "Not calculated yet"
-//        }
-//    }
+    @IBAction func calculateSplit(_ sender: UIButton)
+    {
+        if let total = Double(totalNumber.text!), let tip = Double(tipNumber.text!)
+        {
+            let splitNumber: String = String(format: "%.2f", (total * (1 + (tip)/100)))
+            answerNumber.text = splitNumber
+        }
+        else
+        {
+            answerNumber.text = "Not calculated yet"
+        }
+    }
 
     
     override func viewDidLoad() {
