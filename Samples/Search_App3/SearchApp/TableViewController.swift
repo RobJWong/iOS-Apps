@@ -3,8 +3,6 @@
 //  SearchApp
 //
 //  Created by Robert Wong on 6/16/17.
-//  Copyright © 2017 Kasey Schlaudt. All rights reserved.
-//
 
 import UIKit
 
@@ -13,8 +11,10 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     var ingredients = ["Chicken Breast Without Bone", "Chicken Thigh With Bone", "Garlic", "Soy Sauce",
                        "Parsley", "Onion", "Egg", "Tofu", "Penne"]
     var filteredIngredients = [String]()
+    var selectedIngredients = [String]()
     
     var searchController: UISearchController!
+    
     var resultsController = UITableViewController()
 
     override func viewDidLoad() {
@@ -51,17 +51,11 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         self.resultsController.tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if tableView == self.tableView{
-            return self.ingredients.count
+            return self.selectedIngredients.count
         }
         else {
             return self.filteredIngredients.count
@@ -71,15 +65,26 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         if tableView == self.tableView {
-            //cell.textLabel?.text = self.ingredients[indexPath.row]
-            print("empty")
+            if !selectedIngredients.isEmpty {
+                cell.textLabel?.text = self.selectedIngredients[indexPath.row]
+            }
         }
         else {
             cell.textLabel?.text = self.filteredIngredients[indexPath.row]
         }
-
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == self.tableView {
+            
+        }
+        else {
+            selectedIngredients.append(self.filteredIngredients[indexPath.row])
+            self.tableView.reloadData()
+        }
+        
+    }
+    
   
 }
