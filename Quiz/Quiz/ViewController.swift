@@ -40,14 +40,28 @@ class ViewController: UIViewController {
         let screenWidth = view.frame.width
         self.nextQuestionLabelCenterXConstraint.constant = 0
         self.currentQuestionLabelCenterXConstraint.constant += screenWidth
-        UIView.animate(withDuration: 0.5,
-                     delay: 0,
-                     options: [.curveLinear],
-                     animations :{
-                        self.currentQuestionLabel.alpha = 0
-                        self.nextQuestionLabel.alpha = 1
-                        
-                        self.view.layoutIfNeeded()
+        
+//        UIView.animate(withDuration: 0.5,
+//                     delay: 0,
+//                     options: [.curveLinear],
+//                     animations :{
+//                        self.currentQuestionLabel.alpha = 0
+//                        self.nextQuestionLabel.alpha = 1
+//                        
+//                        self.view.layoutIfNeeded()
+//            },
+          UIView.animate(withDuration: 0.5,
+                           delay: 0,
+                           //usingSpringWithDamping double: where higher values make the bouncing finish faster
+                           usingSpringWithDamping: 0.5,
+                           //initalSpringVelocity double: gives the inital spring momementum
+                           initialSpringVelocity: 5,
+                           //usingSpringWithDamping dampingRatio: CGFloat,
+                           //initialSpringVelocity velocity: CGFloat,
+                           options: [.curveLinear],
+                           animations: {self.currentQuestionLabel.alpha = 0
+                           self.nextQuestionLabel.alpha = 1
+                           self.view.layoutIfNeeded()
             },
                      completion: {_ in
                         swap(&self.currentQuestionLabel,
