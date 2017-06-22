@@ -14,6 +14,8 @@
 		D48DBA821EFABC4400021591 /* HomepwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DBA811EFABC4400021591 /* HomepwnerTests.swift */; };
 		D48DBA8D1EFABC4400021591 /* HomepwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DBA8C1EFABC4400021591 /* HomepwnerUITests.swift */; };
 		D48DBA9B1EFB200700021591 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DBA9A1EFB200700021591 /* ItemsViewController.swift */; };
+		D48DBA9D1EFB218400021591 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DBA9C1EFB218400021591 /* Item.swift */; };
+		D48DBA9F1EFB336000021591 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DBA9E1EFB336000021591 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,9 @@
 		D48DBA881EFABC4400021591 /* HomepwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DBA8C1EFABC4400021591 /* HomepwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerUITests.swift; sourceTree = "<group>"; };
 		D48DBA8E1EFABC4400021591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D48DBA9A1EFB200700021591 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = Homepwner/ItemsViewController.swift; sourceTree = "<group>"; };
+		D48DBA9A1EFB200700021591 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		D48DBA9C1EFB218400021591 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
+		D48DBA9E1EFB336000021591 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,6 @@
 		D48DBA601EFABC4400021591 = {
 			isa = PBXGroup;
 			children = (
-				D48DBA9A1EFB200700021591 /* ItemsViewController.swift */,
 				D48DBA6B1EFABC4400021591 /* Homepwner */,
 				D48DBA801EFABC4400021591 /* HomepwnerTests */,
 				D48DBA8B1EFABC4400021591 /* HomepwnerUITests */,
@@ -99,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				D48DBA6C1EFABC4400021591 /* AppDelegate.swift */,
+				D48DBA9C1EFB218400021591 /* Item.swift */,
+				D48DBA9E1EFB336000021591 /* ItemStore.swift */,
+				D48DBA9A1EFB200700021591 /* ItemsViewController.swift */,
 				D48DBA701EFABC4400021591 /* Main.storyboard */,
 				D48DBA731EFABC4400021591 /* Assets.xcassets */,
 				D48DBA751EFABC4400021591 /* LaunchScreen.storyboard */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48DBA9B1EFB200700021591 /* ItemsViewController.swift in Sources */,
+				D48DBA9D1EFB218400021591 /* Item.swift in Sources */,
+				D48DBA9F1EFB336000021591 /* ItemStore.swift in Sources */,
 				D48DBA6D1EFABC4400021591 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
