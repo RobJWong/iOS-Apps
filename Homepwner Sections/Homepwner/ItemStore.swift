@@ -12,11 +12,11 @@ class ItemStore {
     
     var allItems = [Item]()
     
-//    init() {
-//        for _ in 0..<5 {
-//            createItem()
-//        }
-//    }
+    init() {
+        for _ in 0..<5 {
+            createItem()
+        }
+    }
     
     @discardableResult func createItem() -> Item {
         //Call the function, but ignore the result
@@ -26,11 +26,5 @@ class ItemStore {
         allItems.append(newItem)
         
         return newItem
-    }
-    
-    func removeItem(_ item: Item) {
-        if let index = allItems.index(of: item) {
-            allItems.remove(at: index)
-        }
     }
 }
